@@ -8,12 +8,12 @@ if(
 
   isset($_POST['fecha'])){
    $conexion->query("update usuario set
-                       nombre= '".$_POST['nombre'].",
+                       nombre= '".$_POST['nombre']."',
                        telefono= '".$_POST['telefono']."',
                        email= '".$_POST['email']."',
                        cedula='".$_POST['cedula']."',
                        password='".$_POST['password']."',
-                       fecha='".$_POST['fecha']."''
+                       fecha='".$_POST['fecha']."'
 
                        where id=".$_POST['id']);
    header("Location: ../admin/usuarios.php?successedit");
